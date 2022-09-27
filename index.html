@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <title>toDo project</title>
+  </head>
+  <body>
+    <header>
+      <h1>To Do List</h1>
+    </header>
+    <section class="container">
+      <div class="todo-container">
+        <form>
+          <input type="text" class="input-text">
+          <span class="add-todo"><i class="fa-solid fa-plus-circle"></i></span>
+        </form>
+        <select name="select" id="search-select">
+          <option value="toDo">all</option>
+          <option value="complated">complated</option>
+          <option value="uncomplated">uncomplated</option>
+        </select>
+      </div>
+      <div class="todos-list"></div>
+    </section>
+    <script src="main.js"></script>
+  </body>
+</html>
