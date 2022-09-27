@@ -163,3 +163,11 @@ p {
 .toDo.complated p {
   text-decoration: line-through;
 }
+
+footer {
+  color: var(--primary-color);
+  position: fixed;
+  bottom: 0px;
+  left: 5px;
+  text-shadow: var(--main-white) 0.5px 0.5px, var(--main-red) 1.5px 1.5px;
+}
