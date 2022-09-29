@@ -1,0 +1,181 @@
+@font-face {
+  font-family: vazir;
+  src: url(Assets/vazir-font-v16.1.0/Vazir-Bold.woff) format("woff");
+  src: url(Assets/vazir-font-v16.1.0/Vazir-Bold.woff2) format("woff2");
+}
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--background-color);
+  color: var(--main-gray);
+  font-family: "vazir";
+}
+
+:root {
+  --main-white: #fefefe;
+  --main-gray: #e7e9f0;
+  --primary-color: #9e86bc;
+  --secondary-color: #cec2eb;
+  --background-color: #ddd5f3;
+  --main-red: #fa3131;
+  --main-green: #00ff08;
+}
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 15vh;
+  font-size: 1.5rem;
+}
+header h1 {
+  color: var(--primary-color);
+  text-shadow: 0 0 20px var(--main-white);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: 0.5rem;
+  width: 50%;
+}
+
+.todo-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.todos-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+  width: 70%;
+}
+
+.toDo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 0.5rem;
+  font-family: vazir;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  /* background-color: var(--secondary-color); */
+  background: #cec2eb;
+  box-shadow: inset 4px 4px 7px #b1a7ca, inset -4px -4px 7px #ece3fb;
+  color: var(--primary-color);
+  transition: all linear 0.4s;
+}
+.icons > i[class$="trash-alt"] {
+  color: var(--main-red);
+}
+.icons > i[class$="check-square"] {
+  color: var(--main-green);
+  font-weight: bold;
+}
+i,
+span {
+  cursor: pointer;
+}
+form {
+  background-color: var(--main-white);
+  display: flex;
+  align-items: center;
+  border-radius: 1rem;
+  height: 4rem;
+  width: 70%;
+  outline: 1px solid var(--primary-color);
+  outline-offset: 0px;
+  transition: outline-offset linear 0.1s;
+}
+form:active {
+  outline-offset: 10px;
+}
+input {
+  width: calc(100% - 2rem);
+  border: none;
+  outline: none;
+  padding: 0.8rem 1rem;
+  border-radius: 1rem;
+  color: var(--primary-color);
+  font-family: vazir;
+}
+form > span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 100%;
+  font-size: 1.5rem;
+  padding: 1rem 1.5rem;
+  border-radius: 0 1rem 1rem 0;
+  color: var(--primary-color);
+}
+
+form > span:hover {
+  background-color: var(--primary-color);
+  color: var(--main-white);
+}
+
+select {
+  height: 4rem;
+  width: 25%;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  background-color: var(--main-white);
+  color: var(--primary-color);
+  font-family: vazir;
+}
+.icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 0.5rem;
+}
+
+p {
+  width: 80%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media screen and (max-width: 810px) {
+  .container {
+    width: 70%;
+  }
+}
+
+.input-text::placeholder {
+  color: var(--main-red);
+}
+
+.toDo.complated {
+  opacity: 0.3;
+  transform: scale(0.98);
+}
+.toDo.complated p {
+  text-decoration: line-through;
+}
+footer {
+  color: var(--primary-color);
+  position: fixed;
+  bottom: 0px;
+  left: 5px;
+  text-shadow: var(--main-white) 0.5px 0.5px, var(--main-red) 1.5px 1.5px;
+}
