@@ -3,8 +3,7 @@ todoList Project Web ForPractice
 
 JavaScripts are hidden 😁
 
-Fonts doesn't work on chrome i will Update that
-Test it on Mozila and your MobilePhone 
+with a little neumorphism design pattern;
 
 **PBG0101**
 
